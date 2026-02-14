@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Deep Strategic】2026年 戦略説明資料</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --primary: #06b6d4;
+            --secondary: #10b981;
+            --text-glow: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-deep);
+            background-image:
+                radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+            color: var(--text-glow);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: -0.05em;
+        }
+
+        header p {
+            color: var(--text-dim);
+            font-size: 1.2rem;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--primary);
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-with-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .btn-pdf {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 1px solid var(--primary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-pdf:hover {
+            background: var(--primary);
+            color: var(--bg-deep);
+        }
+
+        .chart-container {
+            height: 350px;
+            margin: 32px 0;
+        }
+
+        .insight-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 16px;
+        }
+
+        .insight-box h4 {
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .pricing-comparison {
+            display: grid;
+            grid-template-columns: 1fr 50px 1fr;
+            align-items: center;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .price-box {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .price-box.new {
+            border-color: var(--primary);
+            background: rgba(6, 182, 212, 0.05);
+        }
+
+        .price-box .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .badge {
+            background: var(--primary);
+            color: var(--bg-deep);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .arrow {
+            color: var(--text-dim);
+            font-size: 2rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .data-table th {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .input-group label {
+            color: var(--text-dim);
+        }
+
+        input[type="number"],
+        input[type="range"] {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        .outputs {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(16, 185, 129, 0.1));
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .output-item p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .output-item.main-result p {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px 0;
+            color: var(--text-dim);
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>STRATEGY v.2026</h1>
+            <p>Market Intelligence & Profit Simulation</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="market-analysis">
+            <h2>01 // MARKET ANALYSIS</h2>
+            <div class="card">
+                <div class="header-with-action">
+                    <h3>個別指導マーケット価格比較</h3>
+                    <a href="全国と徳島県のこれらの詳細レポートをまとめてください．.pdf" target="_blank" class="btn-pdf">DATA SOURCE</a>
+                </div>
+                <div class="chart-container"><canvas id="individualChart"></canvas></div>
+                <!-- 略... -->
+            </div>
+        </section>
+        <!-- 他セクションもDarkスタイルで展開 -->
+    </main>
+
+    <footer>
+        <p>© 2026 STRATEGY DEPT. SYSTEM LOGGED</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Chart.js のデフォルト設定をダークモード用に変更
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.1)';
+    </script>
+</body>
+
+</html>

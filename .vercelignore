@@ -1,0 +1,11 @@
+# Files to ignore during deployment
+全国と徳島県のこれらの詳細レポートをまとめてください．.docx
+全国と徳島県のこれらの詳細レポートをまとめてください．.pdf
+2026年4月新授業料.xlsx
+.git
+.gemini
+node_modules
+README.md
+task.md
+implementation_plan.md
+walkthrough.md

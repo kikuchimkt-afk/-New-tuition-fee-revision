@@ -7,15 +7,18 @@
     <title>2026年 新授業料改定・戦略説明資料</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <header>
         <div class="container">
+            <h1>Strategic Review 2026</h1>
             <h1>2026年 新授業料改定・戦略説明資料</h1>
-            <p>市場環境分析、新料金体系、および収益シミュレーション</p>
+            <p>Forest Project: 市場環境分析、新料金体系、および収益シミュレーション</p>
         </div>
     </header>
 
@@ -23,14 +26,14 @@
 
         <!-- Section 1: 市場環境レポート -->
         <section id="market-analysis">
-            <h2>1. 市場環境レポート（全国 vs 徳島）</h2>
+            <h2>01 市場環境レポート</h2>
 
             <!-- Individual Chart -->
             <div class="card">
                 <div class="header-with-action">
                     <h3>個別指導（1:2）月謝総額比較（中学生）</h3>
                     <a href="全国と徳島県のこれらの詳細レポートをまとめてください．.pdf" target="_blank" class="btn-pdf">
-                        <span class="icon">📊</span> 詳細レポート (PDF) を開く
+                        📊 詳細レポート (PDF) を開く
                     </a>
                 </div>
                 <p>※競合他社の表示価格には「授業料」に加え「維持費・諸経費（月額3,000円〜）」を加算して比較しています。<br>
@@ -39,7 +42,7 @@
                     <canvas id="individualChart"></canvas>
                 </div>
                 <div class="insight-box">
-                    <h4>競合他社 実質月額目安（中学生 1:2 週2回 + 諸費）</h4>
+                    <h4>コア・インサイト：競合他社 実質月額目安</h4>
                     <ul>
                         <li><strong>明光義塾</strong>: 約3.2万円〜3.4万円（諸費込）</li>
                         <li><strong>ITTO個別指導学院</strong>: 約3.1万円〜3.4万円（諸費込）</li>
@@ -49,7 +52,7 @@
             </div>
 
             <!-- Group Chart -->
-            <div class="card" style="margin-top: 30px;">
+            <div class="card">
                 <h3>5教科対応時の月謝・総額比較</h3>
                 <p>PDFレポートの再検証結果：<br>
                     徳島県の集団相場（3.7〜6.2万円）は個別指導を含まない単体の価格です（合計総額は6.2〜9.2万円と記載）。<br>
@@ -62,28 +65,28 @@
 
         <!-- Section 2: 新授業料の改定ポイント -->
         <section id="new-pricing">
-            <h2>2. 新授業料の改定ポイント</h2>
+            <h2>02 新授業料の改定ポイント</h2>
             <div class="card">
                 <div class="header-with-action">
                     <h3>授業料改定の概要</h3>
                     <a href="2026年4月新授業料.pdf" target="_blank" class="btn-pdf">
-                        <span class="icon">📄</span> 詳細資料 (PDF) を開く
+                        📄 詳細資料 (PDF) を開く
                     </a>
                 </div>
                 <p>「授業調整費」の導入により、実質的な値上げとなりますが、市場競争力を維持しつつ収益性を高める戦略です。</p>
 
                 <div class="pricing-comparison">
-                    <div class="price-box old">
+                    <div class="price-box">
                         <h4>旧授業料（中3・週2回）</h4>
                         <p class="price">¥38,690</p>
                         <small>（授業料 ¥35,090 + 諸費 ¥3,600）</small>
                     </div>
-                    <div class="arrow">→</div>
+                    <div class="arrow">▶</div>
                     <div class="price-box new">
+                        <span class="badge">+¥4,840 REVISED</span>
                         <h4>新授業料（中3・週2回）</h4>
                         <p class="price">¥43,530</p>
                         <small>（授業料 ¥35,090 + 調整費 ¥4,840 + 諸費 ¥3,600）</small>
-                        <span class="badge">+¥4,840 UP</span>
                     </div>
                 </div>
 
@@ -133,27 +136,30 @@
 
         <!-- Section 3: 【戦略】保護者ニーズに応える「5教科対応プラン」 -->
         <section id="strategic-plan">
-            <h2>3. 【戦略】保護者ニーズに応える「5教科対応プラン」</h2>
+            <h2>03 戦略的価値提案</h2>
             <div class="card highlight-card">
                 <div class="strategic-title">
                     <span class="main-copy">「個別の予算で、5教科対策を。」</span>
-                    <span class="sub-copy">〜 他社には真似できない圧倒的なバリュープロポジション 〜</span>
+                    <span class="sub-copy">～他社には真似できない圧倒的なバリュープロポジション～</span>
+                    <div style="margin-top: 25px; text-align: center;">
+                        <a href="group_package_report.html" class="btn-pdf">📈 【戦略案 B】プレミアム化・詳細分析を見る</a>
+                    </div>
                 </div>
 
                 <div class="market-fit">
                     <div class="point-box">
                         <h4>保護者の切実な悩み</h4>
                         <ul>
-                            <li>個別指導は高いから、主要教科（英数）しか選べない</li>
-                            <li>でも高校入試は5教科...理・社・国も心配</li>
-                            <li>月額5万円、6万円は家計に厳しい</li>
+                            <li>個別指導は高いから、主要教科しか選べない</li>
+                            <li>でも高校入試は5教科...理社国の対策も心配</li>
+                            <li>月額5〜6万円の通塾費用は家計に厳しい</li>
                         </ul>
                     </div>
-                    <div class="vs-divider">解決</div>
+                    <div class="vs-divider">▶</div>
                     <div class="point-box solution">
                         <h4>新プランでの解決策</h4>
                         <ul>
-                            <li><strong>個別(週1) + グループ指導</strong> というハイブリッド方式</li>
+                            <li><strong>個別(週1) + グループ指導</strong> のハイブリッド</li>
                             <li>英数（個別）＋ 理社国（グループ）の<strong>5教科網羅</strong></li>
                             <li>月額総額 <strong>約3.1万円</strong>（中学生想定）</li>
                         </ul>
@@ -189,26 +195,26 @@
 
         <!-- Section 4: 収益・人件費シミュレーター -->
         <section id="simulation">
-            <h2>4. 収益・人件費シミュレーター</h2>
+            <h2>04 収益・人件費シミュレーター</h2>
 
             <!-- Adjustment Fee Simulation -->
             <div class="card">
-                <h3><span class="icon">📈</span> 授業調整費による増収効果</h3>
+                <h3>📈 授業調整費による増収効果</h3>
                 <div class="input-group">
                     <label for="student-count-adj">対象生徒数:</label>
                     <input type="number" id="student-count-adj" value="50" min="0">
                     <span class="unit">名</span>
                 </div>
                 <div class="result-box" id="adj-result">
-                    <p>月間増収見込: <span class="highlight">¥0</span></p>
-                    <p>年間増収見込: <span class="highlight">¥0</span></p>
+                    <p>月間増収見込: <span id="adj-month">¥0</span></p>
+                    <p>年間増収見込: <span id="adj-year">¥0</span></p>
                 </div>
                 <p class="note">※ 平均調整費 ¥4,800/月として試算</p>
             </div>
 
             <!-- Group Lesson Simulation -->
             <div class="card">
-                <h3><span class="icon">👥</span> 新設グループ指導 収益試算</h3>
+                <h3>👥 新設グループ指導 収益試算</h3>
                 <div class="simulation-grid">
                     <div class="inputs">
                         <div class="input-group">
@@ -259,7 +265,7 @@
     </main>
 
     <footer>
-        <p>© 2026 Tuition Strategy Dept.</p>
+        <p>© 2026 Tuition Strategy Dept. & Analytics</p>
     </footer>
 
     <script src="script.js"></script>

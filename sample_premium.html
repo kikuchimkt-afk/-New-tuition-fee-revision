@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Premium Academic】2026年 戦略説明資料</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a237e;
+            --navy-light: #283593;
+            --gold: #c5a059;
+            --gold-light: #dfc28d;
+            --cream: #fdfbf7;
+            --text-dark: #2c3e50;
+            --text-muted: #5d6d7e;
+            --border: #d5dbdb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        header {
+            background: var(--navy);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', 'Noto Serif JP', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            letter-spacing: 0.05em;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 12px;
+            margin-bottom: 32px;
+            display: inline-block;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 4px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        .header-with-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #f2f2f2;
+            padding-bottom: 16px;
+        }
+
+        .header-with-action h3 {
+            margin-bottom: 0;
+        }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--navy);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 2px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-pdf:hover {
+            background: var(--navy-light);
+        }
+
+        .chart-container {
+            height: 350px;
+            margin: 32px 0;
+            padding: 16px;
+            background: #fff;
+        }
+
+        .insight-box {
+            background: #f4f6f7;
+            padding: 30px;
+            border-radius: 2px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .insight-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gold);
+        }
+
+        .insight-box h4 {
+            font-family: 'Noto Serif JP', serif;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .pricing-comparison {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0;
+            gap: 40px;
+        }
+
+        .price-box {
+            flex: 1;
+            padding: 40px;
+            border: 1px solid var(--border);
+            text-align: center;
+            background: #fff;
+        }
+
+        .price-box.new {
+            border-color: var(--gold);
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-box h4 {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .price-box .price {
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--gold);
+            color: #fff;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        .arrow {
+            font-size: 2.5rem;
+            color: var(--gold);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .data-table th {
+            background: var(--navy);
+            color: #fff;
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .highlight-card {
+            border: 1px solid var(--navy);
+            background: #fff;
+        }
+
+        .strategic-title .main-copy {
+            font-family: 'Playfair Display', 'Noto Serif JP', serif;
+            font-size: 2.4rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .point-box {
+            padding: 30px;
+            border: 1px solid var(--border);
+            flex: 1;
+        }
+
+        .point-box.solution {
+            background: #fdfbf7;
+            border: 1px solid var(--gold);
+        }
+
+        .outputs {
+            background: #fff;
+            border: 2px solid var(--navy);
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .output-item h4 {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .output-item p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .output-item.main-result {
+            border-top: 1px solid var(--gold);
+            padding-top: 24px;
+            margin-top: 16px;
+        }
+
+        .output-item.main-result p {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        footer {
+            background: var(--navy);
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-comparison {
+                flex-direction: column;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>EduStrategy 2026</h1>
+            <p>Institutional Market Analysis & Fiscal Projections</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="market-analysis">
+            <h2>I. 市場景況分析</h2>
+            <div class="card">
+                <div class="header-with-action">
+                    <h3>個別指導部門：市場月謝相場</h3>
+                    <a href="全国と徳島県のこれらの詳細レポートをまとめてください．.pdf" target="_blank" class="btn-pdf">閲覧用PDF資料</a>
+                </div>
+                <!-- 内容... -->
+                <div class="chart-container"><canvas id="individualChart"></canvas></div>
+                <div class="insight-box">
+                    <h4>市場インサイト</h4>
+                    <ul>
+                        <li>徳島県内の競合優位性の検証...</li>
+                        <li>月額諸費込での価格整合性向上...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 同様に他セクションもPremiumスタイルで構成 -->
+    </main>
+
+    <footer>
+        <p>© 2026 Education Strategy Division</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
