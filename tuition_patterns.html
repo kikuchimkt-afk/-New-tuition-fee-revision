@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オーナー説明用：受講パターン分析 | 2026年 戦略説明資料</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .pattern-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pattern-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(6, 78, 59, 0.1);
+        }
+
+        .pattern-card h3 {
+            font-size: 1.25rem;
+            color: var(--forest-deep);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--sage);
+            padding-bottom: 10px;
+        }
+
+        .price-tag {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--amber);
+            margin: 15px 0;
+            text-align: right;
+        }
+
+        .price-tag small {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+
+        .scenario-box {
+            background: var(--sage);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .target-tag {
+            display: inline-block;
+            background: var(--forest-deep);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .highlight-pattern {
+            border: 2px solid var(--amber);
+            position: relative;
+            background: linear-gradient(to bottom right, #fff, #fffbeb);
+        }
+
+        .highlight-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--amber);
+            color: #fff;
+            padding: 4px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .footer-action {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 2px solid var(--forest-deep);
+            color: var(--forest-deep);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--forest-deep);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1 style="font-size: 2.8rem; margin-bottom: 5px;">TUITION PATTERNS 2026</h1>
+            <p style="font-size: 1.4rem; font-weight: 700; opacity: 0.95; margin-bottom: 10px;">オーナー説明用：新授業料・想定受講パターン集
+            </p>
+            <p>10のケーススタディによる収益・価値提案のシミュレーション</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>01 中学生パターン（5選）</h2>
+            <div class="pattern-grid">
+                <!-- Case 1 -->
+                <div class="pattern-card">
+                    <span class="target-tag">中1・中2</span>
+                    <h3>① 標準・定期テスト対策</h3>
+                    <div class="scenario-box">
+                        主要2教科（英・数）を確実に。公立・私立問わず学内順位を安定させる基本プラン。
+                    </div>
+                    <ul style="list-style: none; padding-bottom: 10px;">
+                        <li>• 個別指導 1:2 (週2回)</li>
+                        <li>• 月額諸費 込</li>
+                    </ul>
+                    <div class="price-tag">¥41,598 <small>/月</small></div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="pattern-card highlight-pattern">
+                    <div class="highlight-badge">最推奨：戦略案 B</div>
+                    <span class="target-tag">中1・中2</span>
+                    <h3>② 5教科完全攻略パッケージ</h3>
+                    <div class="scenario-box">
+                        個別の丁寧さと、集団の演習量を両立。都心部大手塾に負けない「5教科網羅」を実現。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別(週1) + グループ(週3)</li>
+                        <li>• 全国模試 年10回 込</li>
+                    </ul>
+                    <div class="price-tag">¥48,000 <small>/月</small></div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="pattern-card">
+                    <span class="target-tag">中3</span>
+                    <h3>③ 本科受験スタンダード</h3>
+                    <div class="scenario-box">
+                        志望校合格に向けた主要教科の徹底強化。夏以降の追い込みに対応する標準構成。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別指導 1:2 (週2回)</li>
+                        <li>• 調整費・諸費 込</li>
+                    </ul>
+                    <div class="price-tag">¥43,530 <small>/月</small></div>
+                </div>
+
+                <!-- Case 4 -->
+                <div class="pattern-card highlight-pattern">
+                    <div class="highlight-badge">最高収益・合格コミット</div>
+                    <span class="target-tag">中3</span>
+                    <h3>④ プレミアム・最難関校対策</h3>
+                    <div class="scenario-box">
+                        上位校狙いのマストアイテム。個別での弱点克服とグループでのハイレベル演習。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別(週2) + グループ(週3)</li>
+                        <li>• 模試・進捗管理レポート 込</li>
+                    </ul>
+                    <div class="price-tag">¥68,000 <small>/月</small></div>
+                </div>
+
+                <!-- Case 5 -->
+                <div class="pattern-card">
+                    <span class="target-tag">中3</span>
+                    <h3>⑤ 苦手教科集中・逆転合格</h3>
+                    <div class="scenario-box">
+                        特定の苦手教科を3セッションで徹底補強。短期集中で偏差値を引き上げる特化型。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別指導 1:2 (週3回)</li>
+                        <li>• 徹底反復演習 込</li>
+                    </ul>
+                    <div class="price-tag">¥65,000 <small>〜/月</small></div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 80px;">
+            <h2>02 高校生パターン（5選）</h2>
+            <div class="pattern-grid">
+                <!-- Case 6 -->
+                <div class="pattern-card">
+                    <span class="target-tag">高1・高2</span>
+                    <h3>⑥ 指定校推薦・評定確保</h3>
+                    <div class="scenario-box">
+                        内申点UPに特化。学校の進度に合わせた個別指導で、高評価をキープ。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別指導 1:2 (週2回)</li>
+                        <li>• 定期試験直前対策 込</li>
+                    </ul>
+                    <div class="price-tag">¥43,530 <small>/月</small></div>
+                </div>
+
+                <!-- Case 7 -->
+                <div class="pattern-card">
+                    <span class="target-tag">高1・高2</span>
+                    <h3>⑦ 自立型・国公立基礎固め</h3>
+                    <div class="scenario-box">
+                        主要教科は個別で、他教科は自立演習管理で。学習習慣の定着を狙うバランス型。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別(週1) + 演習管理(自習)</li>
+                        <li>• コーチング月2回 込</li>
+                    </ul>
+                    <div class="price-tag">¥38,000 <small>/月</small></div>
+                </div>
+
+                <!-- Case 8 -->
+                <div class="pattern-card highlight-pattern">
+                    <div class="highlight-badge">共通テスト対策</div>
+                    <span class="target-tag">高3</span>
+                    <h3>⑧ 共通テスト5教科制覇</h3>
+                    <div class="scenario-box">
+                        共通テスト全教科の戦略的対策。個別指導とグループでの問題演習を融合。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別(週2) + G演習管理</li>
+                        <li>• 共通テスト模試分析 込</li>
+                    </ul>
+                    <div class="price-tag">¥65,000 <small>/月</small></div>
+                </div>
+
+                <!-- Case 9 -->
+                <div class="pattern-card highlight-pattern">
+                    <div class="highlight-badge">最難関対策</div>
+                    <span class="target-tag">高3</span>
+                    <h3>⑨ 難関私大・演習特化</h3>
+                    <div class="scenario-box">
+                        MARCH・関関同立レベルへの特化カリキュラム。過去問演習と個別解説をループ。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別(週2) + 二次/私大演習</li>
+                        <li>• 個別最適化スケジュール 込</li>
+                    </ul>
+                    <div class="price-tag">¥72,000 <small>/月</small></div>
+                </div>
+
+                <!-- Case 10 -->
+                <div class="pattern-card">
+                    <span class="target-tag">全学年</span>
+                    <h3>⑩ 英検・資格試験対策</h3>
+                    <div class="scenario-box">
+                        英検2級・準1級合格をターゲット、または外部試験加算のある入試対策。
+                    </div>
+                    <ul style="list-style: none;">
+                        <li>• 個別(週1) + 特能/資格加算</li>
+                        <li>• 2次面接対策 込</li>
+                    </ul>
+                    <div class="price-tag">¥35,000 <small>/月</small></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-action">
+            <a href="index.html" class="btn-back">◀ 戦略説明資料トップへ戻る</a>
+        </div>
+
+    </main>
+
+    <footer style="margin-top: 100px;">
+        <p>© 2026 ECCベストワン藍住・北島中央</p>
+    </footer>
+
+</body>
+
+</html>
