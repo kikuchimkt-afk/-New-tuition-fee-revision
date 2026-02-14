@@ -92,6 +92,27 @@
             font-weight: 800;
         }
 
+        .breakdown-list {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-top: 1px dashed var(--border);
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .breakdown-list div {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 5px;
+        }
+
+        .breakdown-list div span:last-child {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--forest-deep);
+        }
+
         .footer-action {
             margin-top: 60px;
             text-align: center;
@@ -138,10 +159,11 @@
                     <div class="scenario-box">
                         主要2教科（英・数）を確実に。公立・私立問わず学内順位を安定させる基本プラン。
                     </div>
-                    <ul style="list-style: none; padding-bottom: 10px;">
-                        <li>• 個別指導 1:2 (週2回)</li>
-                        <li>• 月額諸費 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>授業料 (週2)</span><span>¥33,400</span></div>
+                        <div><span>授業調整費</span><span>¥4,598</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥41,598 <small>/月</small></div>
                 </div>
 
@@ -153,10 +175,13 @@
                     <div class="scenario-box">
                         個別の丁寧さと、集団の演習量を両立。都心部大手塾に負けない「5教科網羅」を実現。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別(週1) + グループ(週3)</li>
-                        <li>• 全国模試 年10回 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>個別指導 (週1)</span><span>¥12,400</span></div>
+                        <div><span>グループ指導パック*</span><span>¥32,000</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                        <div style="font-size: 0.75rem; border: none; padding-top: 5px; opacity: 0.7;">*演習指導・全国模試・AI教材込
+                        </div>
+                    </div>
                     <div class="price-tag">¥48,000 <small>/月</small></div>
                 </div>
 
@@ -167,10 +192,11 @@
                     <div class="scenario-box">
                         志望校合格に向けた主要教科の徹底強化。夏以降の追い込みに対応する標準構成。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別指導 1:2 (週2回)</li>
-                        <li>• 調整費・諸費 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>授業料 (週2)</span><span>¥35,090</span></div>
+                        <div><span>授業調整費</span><span>¥4,840</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥43,530 <small>/月</small></div>
                 </div>
 
@@ -182,10 +208,12 @@
                     <div class="scenario-box">
                         上位校狙いのマストアイテム。個別での弱点克服とグループでのハイレベル演習。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別(週2) + グループ(週3)</li>
-                        <li>• 模試・進捗管理レポート 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>個別指導 (週2)</span><span>¥35,090</span></div>
+                        <div><span>授業調整費</span><span>¥4,840</span></div>
+                        <div><span>グループ演習パック</span><span>¥24,470</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥68,000 <small>/月</small></div>
                 </div>
 
@@ -196,10 +224,11 @@
                     <div class="scenario-box">
                         特定の苦手教科を3セッションで徹底補強。短期集中で偏差値を引き上げる特化型。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別指導 1:2 (週3回)</li>
-                        <li>• 徹底反復演習 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>授業料 (週3)</span><span>¥52,635</span></div>
+                        <div><span>授業調整費</span><span>¥7,260</span></div>
+                        <div><span>維持費・諸経費</span><span>¥5,105</span></div>
+                    </div>
                     <div class="price-tag">¥65,000 <small>〜/月</small></div>
                 </div>
             </div>
@@ -215,10 +244,11 @@
                     <div class="scenario-box">
                         内申点UPに特化。学校の進度に合わせた個別指導で、高評価をキープ。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別指導 1:2 (週2回)</li>
-                        <li>• 定期試験直前対策 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>授業料 (週2)</span><span>¥35,090</span></div>
+                        <div><span>授業調整費</span><span>¥4,840</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥43,530 <small>/月</small></div>
                 </div>
 
@@ -229,10 +259,11 @@
                     <div class="scenario-box">
                         主要教科は個別で、他教科は自立演習管理で。学習習慣の定着を狙うバランス型。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別(週1) + 演習管理(自習)</li>
-                        <li>• コーチング月2回 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>個別指導 (週1)</span><span>¥17,545</span></div>
+                        <div><span>自立演習管理費</span><span>¥16,855</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥38,000 <small>/月</small></div>
                 </div>
 
@@ -244,10 +275,12 @@
                     <div class="scenario-box">
                         共通テスト全教科の戦略的対策。個別指導とグループでの問題演習を融合。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別(週2) + G演習管理</li>
-                        <li>• 共通テスト模試分析 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>授業料 (週2)</span><span>¥36,750</span></div>
+                        <div><span>授業調整費</span><span>¥5,082</span></div>
+                        <div><span>共通テスト対策パック</span><span>¥19,568</span></div>
+                        <div><span>維持費・諸経備</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥65,000 <small>/月</small></div>
                 </div>
 
@@ -259,10 +292,12 @@
                     <div class="scenario-box">
                         MARCH・関関同立レベルへの特化カリキュラム。過去問演習と個別解説をループ。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別(週2) + 二次/私大演習</li>
-                        <li>• 個別最適化スケジュール 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>授業料 (週2)</span><span>¥36,750</span></div>
+                        <div><span>授業調整費</span><span>¥5,082</span></div>
+                        <div><span>二次・私大演習パック</span><span>¥26,568</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥72,000 <small>/月</small></div>
                 </div>
 
@@ -273,10 +308,11 @@
                     <div class="scenario-box">
                         英検2級・準1級合格をターゲット、または外部試験加算のある入試対策。
                     </div>
-                    <ul style="list-style: none;">
-                        <li>• 個別(週1) + 特能/資格加算</li>
-                        <li>• 2次面接対策 込</li>
-                    </ul>
+                    <div class="breakdown-list">
+                        <div><span>個別指導 (週1)</span><span>¥18,375</span></div>
+                        <div><span>特能/資格試験加算</span><span>¥13,025</span></div>
+                        <div><span>維持費・諸経費</span><span>¥3,600</span></div>
+                    </div>
                     <div class="price-tag">¥35,000 <small>/月</small></div>
                 </div>
             </div>
